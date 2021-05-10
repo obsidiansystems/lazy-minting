@@ -6,6 +6,6 @@ describe("TestLazyMint", function() {
         const tlm = await TestLazyMint.deploy("https://dank.ca");
 
         // await tlm.setBaseURI("https://dank.ca");
-        expect(await await tlm.baseURI).to.equal("https://dank.ca");
+        expect(await tlm.baseURI()).to.equal("https://dank.ca");
     });
 });
