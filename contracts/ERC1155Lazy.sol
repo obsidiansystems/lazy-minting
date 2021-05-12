@@ -10,6 +10,8 @@ import "@rarible/lazy-mint/contracts/erc-1155/IERC1155LazyMint.sol";
 import "./Mint1155Validator.sol";
 import "./ERC1155BaseURI.sol";
 
+import "hardhat/console.sol";
+
 abstract contract ERC1155Lazy is IERC1155LazyMint, ERC1155BaseURI, Mint1155Validator, RoyaltiesV2Upgradeable, RoyaltiesV2Impl {
     using SafeMathUpgradeable for uint;
 
