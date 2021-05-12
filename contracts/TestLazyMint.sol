@@ -1,10 +1,13 @@
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: MIT
 
-import "./ERC1155LazyMint.sol";
+pragma solidity ^0.7.4;
+pragma abicoder v2;
 
-contract TestLazyMint is ERC1155LazyMint
+import "./ERC1155Lazy.sol";
+
+contract TestLazyMint is ERC1155Lazy
 {
-    constructor(string memory base) ERC1155LazyMint() {
+    constructor(string memory base) ERC1155Lazy() {
         _setBaseURI(base);
     }
 }

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity >=0.6.2 <0.8.0;
 
 import "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol";
@@ -23,7 +23,7 @@ contract ERC1155BaseURI is ERC1155Upgradeable {
         return _baseURI;
     }
 
-    function uri(uint id) public view override virtual returns (string memory) {
+    function uri(uint id) external view override virtual returns (string memory) {
         return _tokenURI(id);
     }
 
@@ -69,4 +69,5 @@ contract ERC1155BaseURI is ERC1155Upgradeable {
             delete _tokenURIs[tokenId];
         }
     }
- }
+    uint256[50] private __gap;
+}
