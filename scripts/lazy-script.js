@@ -68,12 +68,11 @@ async function main() {
   );
 
   console.log("TestLazyMint uri:", await testLazyMint.uri(0));
+  console.log("TestLazyMint creator:", await testLazyMint.getCreators(0));
   console.log(
-    "TestLazyMint balance:",
-    await testLazyMint.balanceOf(owner01.getAddress(), 0)
+    "TestLazyMint balance for owner01:",
+    await testLazyMint.balanceOf(owner01Addr, tokenId)
   );
-  console.log("TestLazyMint creator:", await testLazyMint.getCreator(0));
-  console.log("TestLazyMint supply:", await testLazyMint.getSupply(0));
 }
 
 // NOTE: This is recommmended to be able to use async/await everywhere
